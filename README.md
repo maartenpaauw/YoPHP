@@ -20,6 +20,7 @@ $yo = new yo($token);
 ```
 
 __All__
+
 Send a Yo (with a link) to all subscribers.
 
 ```php
@@ -31,6 +32,7 @@ $yo->all($link);
 ```
 
 __User__
+
 Send a Yo (with a link) to a specific subscriber.
 
 ```php
@@ -42,6 +44,7 @@ $yo->user($username, $link);
 ```
 
 __Subscribers__
+
 Get the number of subscribers.
 
 ```php
