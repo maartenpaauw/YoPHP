@@ -2,7 +2,7 @@
 
 /**
  * Yo PHP
- * A PHP class for the Yo API from dev.justyo.co
+ * A PHP class for the Yo API from http://dev.justyo.co/
  * 
  * @Author Maarten Paauw
  */
