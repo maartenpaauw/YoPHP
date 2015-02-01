@@ -1,30 +1,56 @@
-<?
-/**
- * Yo PHP
- * A PHP class for the Yo API from dev.justyo.co
- * 
- * @Author Maarten Paauw
- */
- 
-require_once("class.yo.php");
+<?php
 
-$token = "YOUR_API_TOKEN";
-$link = "URL";
-$username = "USERNAME";
+require('yo.class.php');
 
-$yo = new yo($token);
+$api_token   = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+$link        = "http://www.google.com/";
+$username    = "m44rt3np44uw";
+$passcode    = 1234;
+$email       = "info@example.com";
+$description = "This is a test!";
+$location    = true;
 
-// Send a Yo to all subscribers.
-$yo->all();
 
-// Send a Yo with a link to all subscribers.
-$yo->all($link);
 
-// Send a Yo to a specific subscriber.
-$yo->user($username);
 
-// Send a Yo with a link to a specific subscriber.
-$yo->user($username, $link);
+$Yo = new Yo($api_token);
 
-// Get the number of subscribers.
-$yo->subscribers();
+// CHECK USERNAME
+print_r($Yo->checkUsername($username));
+
+
+
+
+$Yo = new Yo($api_token);
+
+// SUBSCRIBERS COUNT
+print_r($Yo->subscribers());
+
+
+
+
+$Yo = new Yo($api_token);
+
+// USER
+print_r($Yo->user($username, $link));
+
+
+
+
+$Yo = new Yo($api_token);
+
+// ALL
+print_r($Yo->all($link));
+
+
+
+
+$Yo = new Yo($api_token);
+
+// CREATE USER
+print_r($Yo->createAccount($username, $passcode, $link, $email, $description, $location));
+
+
+
+
+
