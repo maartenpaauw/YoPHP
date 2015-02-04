@@ -16,6 +16,10 @@ class Yo {
      */
     private $url;
     /**
+     * @var string
+     */
+    private $homeUrl;
+    /**
      * @var array
      */
     private $params;
@@ -32,7 +36,7 @@ class Yo {
         }
 
         // URL
-        $this->url = "http://api.justyo.co/";
+        $this->homeUrl = "http://api.justyo.co/";
 
         // PARAMS
         $this->params = array(
@@ -50,7 +54,7 @@ class Yo {
     public function user($username, $link_or_location = null)
     {
         // URL
-        $this->url = $this->url . "yo/";
+        $this->url = $this->homeUrl . "yo/";
 
         // USERNAME
         if(isset($username) && !empty($username)) {
@@ -84,7 +88,7 @@ class Yo {
     public function all($link = null)
     {
         // URL
-        $this->url = $this->url . "yoall/";
+        $this->url = $this->homeUrl . "yoall/";
 
         // LINK
         if(isset($link) && !empty($link))
@@ -112,7 +116,7 @@ class Yo {
     public function createAccount($new_account_username, $new_account_passcode, $callback_url = null, $email = null, $description = null, $needs_location = null)
     {
         // URL
-        $this->url = $this->url . "accounts/";
+        $this->url = $this->homeUrl . "accounts/";
 
         if(isset($new_account_username) && !empty($new_account_username) && isset($new_account_passcode) && !empty($new_account_passcode))
         {
@@ -163,7 +167,7 @@ class Yo {
     public function checkUsername($username)
     {
         // URL
-        $this->url = $this->url . "check_username/";
+        $this->url = $this->homeUrl . "check_username/";
 
         // USERNAME
         if(isset($username) && !empty($username))
@@ -184,7 +188,7 @@ class Yo {
     public function subscribers()
     {
         // URL
-        $this->url = $this->url . "subscribers_count/";
+        $this->url = $this->homeUrl . "subscribers_count/";
 
         // REQUEST
         $request = $this->request("get");
