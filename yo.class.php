@@ -109,11 +109,11 @@ class Yo {
      * @param null $callback_url
      * @param null $email
      * @param null $description
-     * @param null $needs_location
+     * @param bool $needs_location
      *
      * @return mixed
      */
-    public function createAccount($new_account_username, $new_account_passcode, $callback_url = null, $email = null, $description = null, $needs_location = null)
+    public function createAccount($new_account_username, $new_account_passcode, $callback_url = null, $email = null, $description = null, $needs_location = false)
     {
         // URL
         $this->url = $this->homeUrl . "accounts/";
